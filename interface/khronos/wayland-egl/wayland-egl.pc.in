@@ -1,0 +1,11 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: wayland-egl
+Description: VideoCore wayland-egl library
+Version: @PROJECT_APIVER@
+Requires: bcm_host
+Libs: -L${libdir} -lwayland-egl
+Cflags: -I${includedir}
